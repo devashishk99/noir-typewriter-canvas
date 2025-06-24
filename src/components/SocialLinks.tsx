@@ -1,12 +1,11 @@
 
-import { Instagram, Facebook, Twitter, Linkedin } from 'lucide-react';
+import { Instagram, Twitter, Mail } from 'lucide-react';
 
 const SocialLinks = () => {
   const socialLinks = [
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' }
+    { icon: Instagram, href: 'https://instagram.com/moonsofmercury', label: 'Instagram' },
+    { icon: Twitter, href: 'https://x.com/nathanaelnoir', label: 'Twitter' },
+    { icon: Mail, href: 'mailto:nathanaelnoir@gmail.com', label: 'Email' }
   ];
 
   return (
@@ -18,6 +17,8 @@ const SocialLinks = () => {
             <a
               key={social.label}
               href={social.href}
+              target={social.href.startsWith('mailto:') ? '_self' : '_blank'}
+              rel={social.href.startsWith('mailto:') ? '' : 'noopener noreferrer'}
               className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-all duration-300 hover:scale-110"
               aria-label={social.label}
             >

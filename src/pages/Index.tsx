@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import SocialLinks from '../components/SocialLinks';
 
@@ -49,9 +50,12 @@ const Index = () => {
             </h1>
           </div>
           
-          <button className="border border-gray-400 dark:border-gray-600 px-8 py-3 text-sm tracking-[0.2em] uppercase hover:bg-gray-900 hover:text-white dark:hover:bg-gray-100 dark:hover:text-gray-900 transition-all duration-300 font-light text-gray-900 dark:text-gray-100">
+          <Link 
+            to="/portfolio"
+            className="inline-block border border-gray-400 dark:border-gray-600 px-8 py-3 text-sm tracking-[0.2em] uppercase hover:bg-gray-900 hover:text-white dark:hover:bg-gray-100 dark:hover:text-gray-900 transition-all duration-300 font-light text-gray-900 dark:text-gray-100"
+          >
             Discover Work
-          </button>
+          </Link>
         </div>
       </main>
       
