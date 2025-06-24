@@ -33,23 +33,23 @@ const Index = () => {
   }, [currentText, currentIndex, isDeleting, texts]);
 
   return (
-    <div className="min-h-screen bg-[#f4f2e8] flex flex-col">
+    <div className="min-h-screen bg-[#f4f2e8] dark:bg-gray-900 flex flex-col transition-colors duration-300">
       <Navigation />
       
       <main className="flex-1 flex items-center justify-center px-6">
         <div className="text-center max-w-4xl mx-auto">
-          <div className="mb-8">
-            <p className="text-sm tracking-[0.3em] uppercase text-gray-600 mb-6 font-light">
-              I'M NAD AND I'M A
+          <div className="mb-12">
+            <p className="text-sm tracking-[0.3em] uppercase text-gray-600 dark:text-gray-400 mb-8 font-light">
+              I'M NATHANAEL NOIR AND I'M A
             </p>
             
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif text-gray-900 mb-8 leading-none">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-gray-900 dark:text-gray-100 mb-12 leading-none">
               {currentText}
               <span className="animate-pulse">.</span>
             </h1>
           </div>
           
-          <button className="border border-gray-400 px-8 py-3 text-sm tracking-[0.2em] uppercase hover:bg-gray-900 hover:text-white transition-all duration-300 font-light">
+          <button className="border border-gray-400 dark:border-gray-600 px-8 py-3 text-sm tracking-[0.2em] uppercase hover:bg-gray-900 hover:text-white dark:hover:bg-gray-100 dark:hover:text-gray-900 transition-all duration-300 font-light text-gray-900 dark:text-gray-100">
             Discover Work
           </button>
         </div>

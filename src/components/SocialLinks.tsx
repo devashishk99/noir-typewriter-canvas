@@ -10,15 +10,15 @@ const SocialLinks = () => {
   ];
 
   return (
-    <div className="fixed right-6 md:right-8 bottom-1/2 transform translate-y-1/2">
-      <div className="flex flex-col space-y-6">
+    <div className="fixed right-6 md:right-8 bottom-6 md:bottom-8">
+      <div className="flex space-x-4">
         {socialLinks.map((social) => {
           const IconComponent = social.icon;
           return (
             <a
               key={social.label}
               href={social.href}
-              className="text-gray-600 hover:text-gray-900 transition-all duration-300 hover:scale-110"
+              className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-all duration-300 hover:scale-110"
               aria-label={social.label}
             >
               <IconComponent size={20} strokeWidth={1.5} />
